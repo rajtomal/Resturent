@@ -1,0 +1,644 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+
+body{
+    font-family: var(--Ubuntu-font);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+img{
+    vertical-align: middle;
+}
+ul,li{
+    list-style: none;
+}
+::placeholder{
+    color: #dfdfdf;
+}
+:root{
+    --brand-c-1:#D02529;
+    --text-c-1:#ffffff;
+    --text-p-c:#888888;
+    --text--c:#090808;
+    --Ubuntu-font:'Ubuntu', sans-serif;
+    --Dancing-font:'Dancing Script', cursive;
+}
+.item_header{
+    text-align: center;
+}
+.item_header h2{
+    font-family: var(--Dancing-font);
+    font-weight: 700;
+    font-size: 50px;
+    color: var(--brand-c-1);
+}
+.item_header h1{
+    font-weight: 700;
+    font-size: 25px;
+    color: var(--text--c);
+    position: relative;
+    padding-bottom: 25px;
+    text-transform: uppercase;
+}
+.item_header h1::after {
+	content: '';
+	position: absolute;
+	background: url(../images/headding-pattern.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 140px;
+	height: 30px;
+	top: 40px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+/* ====================
+    common css end
+=======================*/
+#menu_part{
+    width: 100%;
+    background: rgba(9, 8, 8, 0.8) !important;
+    padding: 15px 0;
+    position: absolute;
+    z-index: 99;
+}
+#menu_part .navbar-brand img{
+    width: 100%;
+}
+#menu_part .collapse ul li a {
+	font-size: 15px;
+	font-weight: 500;
+    color: var(--text-c-1);
+	margin-left: 30px;
+    position: relative;
+    transition: all linear 0.4s;
+}
+#menu_part .collapse ul li a::after {
+	content: "";
+	position: absolute;
+	width: 0%;
+	height: 2px;
+	bottom: -25px;
+	left: 8px;
+	background-color: var(--brand-c-1);
+    transition: all linear 0.4s;
+}
+#menu_part .collapse ul li a:hover::after{
+    width: 70%;
+}
+#menu_part .collapse ul li a:hover{
+    color: var(--brand-c-1);
+}
+#menu_part .collapse .menu_button {
+	background:var(--brand-c-1);
+    border: 1px solid var(--brand-c-1);
+	padding: 10px 20px;
+	border-radius: 20px;
+    transition: all linear 0.4s;
+}
+#menu_part .collapse .menu_button::after{
+    display: none;
+}
+#menu_part .collapse .menu_button:hover{
+    color: var(--brand-c-1);
+    background: transparent;
+}
+/* ====================
+    menu_part css end
+=======================*/
+#banner_part .banner_bg-1{
+    background: url(../images/banner-1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#banner_part .banner_bg-2{
+    background: url(../images/banner-2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#banner_part .banner_slider{
+    padding: 250px 0;
+    position: relative;
+    z-index: 1;
+}
+#banner_part .banner_slider::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(9, 8, 8, 0.7);
+    z-index: -1;
+}
+#banner_part .banner_slider .banner_text{
+    text-align: center;
+    position: relative;
+}
+#banner_part .banner_slider .banner_text h3{
+    font-size: 45px;
+    font-weight: 500;
+    color: var(--text-c-1);
+}
+#banner_part .banner_slider .banner_text h1{
+    font-family: var(--Dancing-font);
+    font-weight: 800;
+    color: var(--brand-c-1);
+    font-size: 90px;
+    padding: 20px 0;
+}
+#banner_part .banner_slider .banner_text h1 span{
+    color: var(--text-c-1);
+}
+#banner_part .banner_slider .banner_text p{
+    font-size: 30px;
+    font-weight: 400;
+    color: var(--text-c-1);
+}
+#banner_part .all_banner_slider .fa-chevron-left {
+	line-height: 40px;
+	font-size: 25px;
+	color: #a02323;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 250px;
+	z-index: 99;
+	border-radius: 10px;
+	background: #3C3D3E;
+	color: #ffffff;
+	transform: translateY(-50%);
+	transition: all linear 0.4s;
+	cursor: pointer;
+	width: 40px;
+	height: 40px;
+}
+#banner_part .all_banner_slider .fa-chevron-right{
+	width: 40px;
+	height: 40px;
+    line-height: 40px;
+    font-size: 25px;
+    color: #ffffff;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    right: 250px;
+    border-radius: 10px;
+    z-index: 99;
+    background: #3C3D3E;
+    color: var(--text-c-1);
+    transform: translateY(-50%);
+    transition: all linear 0.4s;
+    cursor: pointer;
+}
+#banner_part .all_banner_slider .fa-chevron-left:hover{
+    background: var(--brand-c-1);
+}
+#banner_part .all_banner_slider .fa-chevron-right:hover{
+    background: var(--brand-c-1);
+}
+/* ====================
+    banner_part css end
+=======================*/
+#discover_part{
+    padding: 80px 0;
+}
+#discover_part .row{
+    margin-top: 40px;
+}
+#discover_part .descover_item {
+	text-align: center;
+	padding: 20px 30px;
+}
+
+#discover_part .descover_item .discover_img{
+    width: 60px;
+    margin: 0 auto;
+}
+#discover_part .descover_item .discover_img img{
+    width: 100%;
+    transition: all linear 0.4s;
+}
+#discover_part .descover_item h2{
+	font-weight: 700;
+	font-size: 24px;
+	color: var(--text--c);
+	margin-top: 30px;
+}
+#discover_part .descover_item p{
+	font-size: 15px;
+	font-weight: 400;
+	color: var(--text-p-c);
+	margin-top: 20px;
+}
+#discover_part .descover_item:hover .discover_img img{
+    filter: invert(0) sepia(0) saturate(0) hue-rotate(175deg);
+}
+/* ====================
+    discover_part css end
+=======================*/
+#story_part{
+    background: #f7f7f7;
+    position: relative;
+}
+#story_part .item_header{
+    padding: 120px 0;
+}
+#story_part .img_story img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 40%;
+	height: 100%;
+	object-fit: cover;
+}
+#story_part .item_header p {
+	font-size: 15px;
+	font-weight: 400;
+	color: var(--text-p-c);
+	margin-top: 40px;
+	padding: 0 65px;
+}
+#story_part .item_header a{
+    padding: 10px 20px;
+    background: var(--brand-c-1);
+    border: 1px solid var(--brand-c-1);
+    font-size: 15px;
+    color: var(--text-c-1);
+    border-radius: 25px;
+    transition: all linear 0.4s;
+}
+#story_part .item_header a:hover{
+    background: transparent;
+    color: var(--brand-c-1);
+}
+/* ====================
+    story_part css end
+=======================*/
+#our_menu_part{
+    padding: 80px 0;
+}
+#our_menu_part .row{
+    margin-top: 25px;
+}
+#our_menu_part .menu_item {
+	border: 1px solid #eee;
+	padding: 10px 20px;
+	transition: all linear 0.4s;
+	margin-top: 30px;
+}
+#our_menu_part .menu_item a{
+    font-size: 22px;
+    color: var(--text--c);
+    font-weight: 500;
+    float: left;
+    transition: all linear 0.4s;
+}
+#our_menu_part .menu_item span{
+    float: right;
+    font-family: var(--Dancing-font);
+    font-size: 26px;
+    color: var(--brand-c-1);
+    font-weight: 500;
+}
+#our_menu_part .menu_item p{
+	display: inline-block;
+	margin-top: 15px;
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--text-p-c);
+}
+#our_menu_part .menu_item:hover a{
+    color: var(--brand-c-1);
+}
+#our_menu_part .menu_item:hover{
+    box-shadow: 8px 8px 35px 1px rgb(112 112 112 / 21%);
+}
+/* ====================
+    our_menu_part css end
+=======================*/
+#quick_part{
+    padding: 80px 0;
+    background: url(../images/restaurant.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+#quick_part::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(9, 8, 8, 0.85);
+    z-index: -1;
+}
+#quick_part .row{
+    margin-top: 30px;
+}
+#quick_part .item_header h1{
+    color: var(--text-c-1) !important;
+}
+#quick_part input {
+	width: 100%;
+	height: 40px;
+	background: transparent;
+	border: 1px solid #fff;
+	outline: none;
+    padding: 0 10px;
+    color: #ffffff;
+    margin-top: 30px;
+}
+#quick_part .input_number{
+    appearance: textfield;
+}
+#quick_part a {
+	padding: 10px 20px;
+	background: var(--brand-c-1);
+	border: 1px solid var(--brand-c-1);
+	font-size: 15px;
+	color: var(--text-c-1);
+	border-radius: 25px;
+	transition: all linear 0.4s;
+	margin-top: 65px;
+}
+#quick_part a:hover {
+	background: transparent;
+	color: var(--brand-c-1);
+}
+/* ====================
+    quick_part css end
+=======================*/
+#team_part{
+    padding: 80px 0;
+}
+#team_part .all_team_slider{
+    margin-top:40px;
+}
+#team_part .team_slider{
+    margin: 20px 20px;
+    border-radius: 5px;
+    transition: all linear 0.4s;
+}
+#team_part .team_img img{
+    width: 100%;
+    border-radius: 5px;
+}
+#team_part .team_text {
+	text-align: center;
+	padding: 13px 0;
+}
+#team_part .team_text h2{
+    font-size: 18px;
+font-weight: 700;
+color: var(--brand-c-1);
+display: block;
+}
+#team_part .team_text span{
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--text--c);
+}
+#team_part .team_slider:hover{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+#team_part .all_team_slider .fa-chevron-left {
+	line-height: 40px;
+	font-size: 25px;
+	color: #a02323;
+	text-align: center;
+	position: absolute;
+	top: 43%;
+	left: 20px;
+	z-index: 99;
+	border-radius: 10px;
+	background: #3C3D3E;
+	color: #ffffff;
+	transform: translateY(-50%);
+	transition: all linear 0.4s;
+	cursor: pointer;
+	width: 40px;
+	height: 40px;
+}
+#team_part .all_team_slider .fa-chevron-right{
+	width: 40px;
+	height: 40px;
+    line-height: 40px;
+    font-size: 25px;
+    color: #ffffff;
+    text-align: center;
+    position: absolute;
+    top: 43%;
+    right: 20px;
+    border-radius: 10px;
+    z-index: 99;
+    background: #3C3D3E;
+    color: var(--text-c-1);
+    transform: translateY(-50%);
+    transition: all linear 0.4s;
+    cursor: pointer;
+}
+#team_part .all_team_slider .fa-chevron-left:hover{
+    background: var(--brand-c-1);
+}
+#team_part .all_team_slider .fa-chevron-right:hover{
+    background: var(--brand-c-1);
+}
+/* ====================
+    team_part css end
+=======================*/
+#testimonial_part{
+    padding-top: 80px;
+    background: #f7f7f7;
+}
+#testimonial_part .testimonial_img img {
+	width: 80%;
+	position: relative;
+	bottom: 0px;
+	left: 200px;
+	z-index: 1;
+}
+#testimonial_part .testimonial_text_slider {
+	z-index: 9;
+	left: -80px;
+}
+#testimonial_part .testimonial_text_slider .textimonial_text {
+	background: var(--brand-c-1);
+	padding: 40px 40px;
+	text-align: center;
+	margin-top: 200px;
+	border-radius: 20px;
+	position: relative;
+	z-index: 2;
+}
+#testimonial_part .testimonial_text_slider .textimonial_text p{
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--text-c-1);
+}
+#testimonial_part .testimonial_text_slider .textimonial_text h3 {
+	font-weight: 500;
+	font-size: 22px;
+	color: var(--text-c-1);
+	margin-top: 35px;
+}
+#testimonial_part .testimonial_text_slider .slick-dots li{
+    display: inline-block;
+    margin-left: 10px;
+}
+#testimonial_part .testimonial_text_slider .slick-dots li button {
+	position: relative;
+	font-size: 0;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	border: 0px;
+	background: #d95154;
+}
+#testimonial_part .testimonial_text_slider .slick-dots .slick-active button{
+    background: var(--text-c-1);
+}
+#testimonial_part .testimonial_text_slider ul {
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 48%;
+	transform: translateX(-50%);
+}
+/* ====================
+    testimonial_part css end
+=======================*/
+#footer_part{
+    padding-top: 50px;
+    background: url(../images/footer-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+#footer_part::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(9, 8, 8, 0.9);
+    z-index: -1;
+}
+#footer_part .footer_box{
+    border: 1px solid #292d31;
+    padding: 38px 100px;
+}
+#footer_part .footer_box h2 {
+	font-size: 25px;
+	font-weight: 700;
+	color: var(--text-c-1);
+	text-transform: uppercase;
+	margin-top: 5px;
+}
+#footer_part .footer_form input {
+	width: 100%;
+	height: 40px;
+	background: transparent;
+	border: 0;
+	border-bottom: 1px solid #52585e;
+    position: relative;
+    outline: none;
+    color: var(--text-c-1);
+}
+#footer_part .footer_email{
+    position: relative;
+}
+#footer_part .footer_email button{
+	position: absolute;
+	top: 11px;
+	right: 0;
+	padding: 0;
+	background: transparent;
+	border: 0;
+	color: #fff;
+	font-size: 18px;
+	width: 30px;
+	height: 30px;
+}
+#footer_part .footer_info{
+    border-bottom: 1px solid #292d31;
+}
+#footer_part .footer_logo_part{
+    padding: 50px 0;
+}
+#footer_part .footer_logo_part p {
+	font-size: 15px;
+	color: var(--text-c-1);
+	font-weight: 400;
+	padding-right: 50px;
+	padding-top: 25px;
+	padding-bottom: 20px;
+}
+#footer_part .footer_logo_part .footer_icon a{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 20px;
+    background: #212427;
+    color: var(--text-c-1);
+    text-align: center;
+    margin-right: 10px;
+    transition: all linear 0.4s;
+}
+#footer_part .footer_logo_part .footer_icon a i{
+    margin-top: 10px;
+}
+#footer_part .footer_logo_part .footer_icon a:hover{
+    background: var(--brand-c-1);
+}
+#footer_part .footer_links{
+    background: rgb(33, 36, 39, 0.5);
+    padding: 20px;
+    margin: 50px 0;
+}
+#footer_part .footer_menu h2{
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 20px;
+    padding-left: 25px;
+}
+#footer_part .footer_menu ul{
+    padding-left: 25px;
+}
+#footer_part .footer_menu ul li a{
+    color: #888888;
+    font-weight: 400;
+    font-size: 15px;
+    margin-top: 10px;
+    transition: all linear 0.4s;
+}
+#footer_part .footer_menu ul li a:hover{
+    color: var(--brand-c-1);
+}
+#footer_part .copy_right{
+    padding: 20px 0;
+    text-align: center;
+}
+#footer_part .copy_right p{
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--text-c-1);
+    padding: 0;
+    margin: 0;
+}
+#footer_part .copy_right p span{
+    color: var(--brand-c-1);
+}
+/* ====================
+    footer_part css end
+=======================*/
